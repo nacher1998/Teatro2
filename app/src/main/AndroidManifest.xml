@@ -13,6 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Teatro">
         <activity
+            android:name=".RegisterActivity"
+            android:theme="@style/Theme.Teatro">
+        </activity>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
