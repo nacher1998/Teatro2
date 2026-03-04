@@ -13,18 +13,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Teatro">
         <activity
-            android:name=".RegisterActivity"
-            android:theme="@style/Theme.Teatro">
+            android:name=".LandingActivity"
+            android:exported="true"
+            tools:ignore="Instantiatable">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
         </activity>
+
+        <!-- Login Screen -->
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="false" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <!-- Register Screen -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>
