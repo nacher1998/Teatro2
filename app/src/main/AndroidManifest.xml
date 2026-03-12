@@ -33,6 +33,10 @@
         <activity
             android:name=".RegisterActivity"
             android:exported="false" />
+        <activity
+            android:name=".EventosActivity"
+            android:exported="false" />
+            /*android:theme="@style/Theme.Teatro2" />
 
     </application>
 
