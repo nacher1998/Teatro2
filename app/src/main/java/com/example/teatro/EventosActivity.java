@@ -1,5 +1,6 @@
 package com.example.teatro; // ¡IMPORTANTE! Cambia esto por el nombre de tu paquete (ej: com.example.teatro2)
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -30,5 +31,12 @@ public class EventosActivity extends AppCompatActivity {
                 // Aquí podrías cambiar el texto de "Jue, 17 Agosto" por el del día pulsado
             }
         });
+        Intent intent = new Intent(EventosActivity.this, DetalleEventoActivity.class);
+// "Empaquetamos" los datos del evento específico que el usuario ha tocado
+        intent.putExtra("TITULO", "Romeo y Julieta");
+        intent.putExtra("FECHA_HORA", "Jue, 17 Agosto • 20:30");
+        intent.putExtra("DESCRIPCION", "La clásica tragedia de William Shakespeare adaptada por...");
+// Iniciamos la nueva pantalla
+        startActivity(intent);
     }
 }
